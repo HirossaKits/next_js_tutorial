@@ -4,6 +4,7 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
+import LikeButton from "../../components/LikeButton";
 
 type Props = {
   postData: {
@@ -27,6 +28,7 @@ export default function Post({ postData }: Props) {
         <br />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
+      <LikeButton />
     </Layout>
   );
 }

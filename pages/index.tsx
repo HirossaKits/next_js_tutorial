@@ -4,6 +4,7 @@ import Link from "next/link";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { GetStaticProps } from "next";
+import LikeButton from "../components/LikeButton";
 
 type Props = {
   allPostsData: {
@@ -65,6 +66,7 @@ export default function Home({ allPostsData }: Props) {
           ))}
         </ul>
       </section>
+      <LikeButton />
     </Layout>
   );
 }
